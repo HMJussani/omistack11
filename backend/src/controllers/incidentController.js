@@ -15,7 +15,14 @@ module.exports = {
     },
 
     async read(request, response) {
-        const data = await conection('incident').select('*');
+        const {page = 1} = request.query;
+        const [count] = await conection('incident').count();
+        const data = await conection('incident')
+        .join('ongs', 'ong_id','=','incident.ong_id')
+        .limit(5)
+        .offset((page -1)*5)
+        .select(['incident.*','ongs.name', 'ongs.email', 'ongs.whatsapp', 'ongs.city', 'ongs.uf']);
+        response.header('X-Total-Count',count['count(*)']);
         return response.json(data);
     },
 
@@ -29,10 +36,6 @@ module.exports = {
         }
         await conection('incident').where('id', id).delete();
         return response.status(204).send();
-
     }
-
-
-
 };
 
