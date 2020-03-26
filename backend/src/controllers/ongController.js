@@ -16,6 +16,10 @@ module.exports = {
     async read(request, response){
         const ongs = await conection('ongs').select('*');
         return response.json(ongs);
+    },
+
+    async welcome(request, response){
+        return response.send('System Ok, Welcome!');
     }
 
 };

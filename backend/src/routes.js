@@ -7,6 +7,7 @@ const sessionController = require('../src/controllers/sessionController');
 
 
 routes.get('/ongs',ongController.read);
+routes.get('/',ongController.welcome);
 routes.post('/ongs',ongController.create);
 routes.post('/sessions',sessionController.create);
 
