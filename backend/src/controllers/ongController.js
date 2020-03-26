@@ -9,7 +9,7 @@ module.exports = {
         const id = crypto.randomBytes(4).toString('HEX');
         await conection('ongs').insert({
             id, name, email, whatsapp, city, uf
-        })
+        });
         return response.json({ id });
     },
 
