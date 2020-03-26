@@ -1,4 +1,4 @@
-.logon-container {
+.Register-container {
     width: 100%;
     max-width: 1120px;
     height: 100vh;
@@ -8,36 +8,47 @@
     justify-content: center;
 }
 
-.logon-container section.form {
+.Register-container .content {
     width: 100%;
-    max-width: 350px;
-    margin-right: 30px;
-}
-
-.logon-container section.form form {
-    margin-top: 100px;
-}
-
-.logon-container section.form form h1 {
-    font-size: 32px;
-    margin-bottom: 32px;
-}
-
-.logon-container section.form form a {
+    padding: 96px;
+    background: #f0f0f5;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    margin-top: 40px;
-    color: #41414d;
-    font-size: 18px;
-    text-decoration: none;
-    font-weight: 700;
-    transition: opacity 0.2s;
 }
 
-.logon-container section.form form a svg {
-    margin-right: 8px;
+.Register-container .content section {
+    width: 100%;
+    max-width: 380px;
 }
 
-.logon-container section.form form a:hover {
-    opacity: 0.8;
+.Register-container .content section h1 {
+    font-size: 32px;
+    margin: 64px 0 32px;
+}
+.Register-container .content section p {
+    font-size: 16px;
+   line-height: 32px;
+   color: #737380;
+}
+
+.Register-container .content form {
+    width: 100%;
+    max-width: 450px;
+   
+}
+
+.Register-container .content form input {
+    margin-top: 8px;
+}
+
+.Register-container .content  form .input-group {
+   display: flex;
+}
+
+.Register-container .content  form .input-group input + input{
+    margin-left: 8px;
+  
 }

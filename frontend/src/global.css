@@ -35,3 +35,22 @@ form input {
 .button:hover{
     filter: brightness(90%);
 }
+
+.backLink {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    color: #41414d;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: opacity 0.2s;
+}
+
+.backLink svg {
+    margin-right: 8px;
+}
+
+.backLink:hover {
+    opacity: 0.8;
+}
