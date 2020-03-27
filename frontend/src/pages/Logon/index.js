@@ -21,7 +21,7 @@ export default function Logon() {
             localStorage.setItem('ongName', response.data.name);
             history.push('/profile');
         } catch (error) {
-            alert(`Erro: ${error}`);
+            alert(`Erro: ID inválido ou inexistente.`);
         }
     }
 
