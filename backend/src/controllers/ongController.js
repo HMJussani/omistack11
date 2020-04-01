@@ -13,8 +13,14 @@ module.exports = {
         return response.json({ id });
     },
 
-    async read(request, response){
+    async read(request, response){      
         const ongs = await conection('ongs').select('*');
+        return response.json(ongs);
+    },
+
+    async delete(request, response){
+        const id = request.headers.autorization;
+        const ongs = await conection('ongs').where('id',id).select('name');
         return response.json(ongs);
     },
 
