@@ -20,8 +20,8 @@ module.exports = {
 
     async delete(request, response){
         const id = request.headers.autorization;
-        const ongs = await conection('ongs').where('id',id).select('name');
-        return response.json(ongs);
+        await conection('ongs').where('id',id).delete();
+        return response.status(204).send();
     },
 
     async welcome(request, response){
